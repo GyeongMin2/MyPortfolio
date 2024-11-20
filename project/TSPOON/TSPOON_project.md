@@ -248,4 +248,4 @@ public class DbQueryUtil implements AutoCloseable {
 ### Class Diagram & ERD
 ![classDiagram](https://github.com/GyeongMin2/MyPortfolio/blob/main/images/TSPOON/TSPOON_classdiagram.png)
 
-![erd]([images/TSPOON/TSPOON_ERD.png](https://github.com/GyeongMin2/MyPortfolio/blob/main/images/TSPOON/TSPOON_ERD.png))
+![erd](https://github.com/GyeongMin2/MyPortfolio/blob/main/images/TSPOON/TSPOON_ERD.png)
