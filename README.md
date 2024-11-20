@@ -1,10 +1,10 @@
 # 백엔드 개발자 포트폴리오
 
-**최종 업데이트**: 2024년 11월 20일
+##### **최종 업데이트**: 2024년 11월 20일
 
 ***
 
-## 소개
+## 👋 소개
 안녕하세요! 백엔드 개발자를 목표로 하는 [강경민]입니다.
 - 서버 개발과 시스템 아키텍처에 관심이 많습니다
 - 클린 코드와 테스트 작성을 중요하게 생각합니다
@@ -12,14 +12,12 @@
 
 ## 기술 스택
 ### 언어
-![Java](https://img.shields.io/badge/Java-007396?style=flat-square&logo=Java&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white) 
-
+![Java](https://img.shields.io/badge/Java-007396?style=flat-square&logo=Java&logoColor=white) 
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white) 
 
 ### 프레임워크 & 라이브러리
 ![Spring](https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=Spring&logoColor=white) 
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33D?style=flat-square&logo=Spring_Boot&logoColor=white) 
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white)
-![WebSocket](https://img.shields.io/badge/WebSocket-000000?style=flat-square&logo=WebSocket&logoColor=white)
 
 ### ORM & 데이터 처리
 ![JPA](https://img.shields.io/badge/JPA-6DB33F?style=flat-square&logo=Spring&logoColor=white)
@@ -30,18 +28,27 @@
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white)
 ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=MariaDB&logoColor=white)
 
+### 프로토콜 & 통신
+![WebSocket](https://img.shields.io/badge/WebSocket-000000?style=flat-square&logo=WebSocket&logoColor=white)
+
+### 서버 & WAS
+![Tomcat](https://img.shields.io/badge/Tomcat-F8DC75?style=flat-square&logo=ApacheTomcat&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white)
+
 ### 인프라 & 도구
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=AmazonAWS&logoColor=white)
 ![Azure](https://img.shields.io/badge/Azure-0089D6?style=flat-square&logo=MicrosoftAzure&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=Git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white)
 ![letsEncrypt](https://img.shields.io/badge/Let's_Encrypt-003A70?style=flat-square&logo=Let%27sEncrypt&logoColor=white)
 
 ### OS
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=Linux&logoColor=black)
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=flat-square&logo=Ubuntu&logoColor=white)
 
-## 주요 프로젝트
-### 1. [TSPOON]
+***
+## 📝 주요 프로젝트
+### 1.🥄[TSPOON]
 > 이 프로젝트는 회원가입, 로그인, 게시판 CRUD, 쪽지 기능 등을 포함하고 있습니다.
 
 **역할**: 백엔드 개발
@@ -68,7 +75,7 @@
 
 ***
 
-### 2. [onlineLecture]
+### 2.🎥[onlineLecture]
 > 이 프로젝트는 온라인 강의 플랫폼으로, 강의 관리, 사용자 인증 등의 기능을 포함하고 있습니다.
 
 **역할**: 백엔드개발 및 공통 모듈 설계 및 DB설계 및 DDL관리, 홈서버 구축 및 배포
@@ -97,7 +104,7 @@
 
 ***
 
-### 3. [eduSecond]
+### 3.🎒[eduSecond]
 >이 프로젝트는 중고 거래 플랫폼으로, 중고 물품 거래 및 채팅 기능을 포함하고 있습니다.
 
 **역할**: 백엔드 개발
@@ -123,18 +130,26 @@
   - 트랜잭션 관리를 통한 데이터 정합성 보장
     - 회원 탈퇴 시 관련 데이터(게시글, 댓글, 채팅 등) 일괄 처리
     - 실패 시 롤백 처리로 데이터 일관성 유지
+  - 필터를 통한 관리자 인증 및 권한 검증
 
-
++ [github](https://github.com/eduSecond)
++ [주요 소스코드](project/eduSecond/eduSecond_project.md)
++ [프레젠테이션](project/eduSecond/eduSecond_project.pdf)
 
 ## 📈 기술적 성과
-- **데이터베이스 최적화**: 쿼리 최적화를 통해 응답 시간 30% 개선
-- **시스템 아키텍처 설계**: MSA 설계 및 구현 경험
-- **성능 개선**: 캐싱 도입으로 서버 부하 50% 감소
-- [그 외 기술적 성과들]
+- **홈서버 구축 및 배포**
+  - SSL 인증서를 Let's Encrypt를 통해 설정하여 웹 애플리케이션의 보안을 강화
+  - 포트포워딩 설정을 통해 웹 애플리케이션 배포
+- **Restful API 설계 및 구현**
+  - 웹 애플리케이션에서 필요한 데이터를 효과적으로 전달하고 처리하기 위한 API 설계 및 구현
+- **크론탭과 스케쥴러를 통한 리소스 모니터링**
+  - java와 크론탭을 통해 리소스 모니터링 및 로그 저장
+
 
 ## 🎓 교육
 - 명지전문대학 | 소프트웨어 콘텐츠학과 (2024년 8월)
-- 
+- 천재교육 | java fullstack 개발자 과정 (2024년 7월 ~ 2025년 1월)
+- 상원고등학교 (2020년 1월)
 
 ## 📑 자격증 & 수상
 - 자격증명 (취득연도)
@@ -142,14 +157,14 @@
 
 ## 📞 연락처
 - 이메일: kgmmsw101@gmail.com
-- GitHub: [GitHub 프로필 링크]
+- GitHub: [GyeongMin2](https://github.com/GyeongMin2)
 
-## 토이 프로젝트
+## 🧑‍💻 토이 프로젝트
 
-### 1.[javaSimpleBoard](https://github.com/GyeongMin2/javaSimpleBoard)
-> java, jdbc를 이용한 cli기반 게시판
+### 1.🧑‍💻[javaSimpleBoard](https://github.com/GyeongMin2/javaSimpleBoard)
+> java, jdbc,mysql을 이용한 cli기반 게시판
++[주요 소스코드](toyProject/javaSimpleBoard_project.md)
 
-### 2.[javaPlayground](https://github.com/GyeongMin2/javaPlayground)
-> java, jdbc, mysql 을 이용한 리소스모니터 및 저수준 소켓통신 구현
-
-
+### 2.🧑‍💻[javaPlayground](https://github.com/GyeongMin2/javaPlayground)
+> java, jdbc, mysql을 이용한 리소스모니터 및 저수준 소켓통신 구현 (server,client)
++[주요 소스코드](toyProject/javaPlayground_project.md)
