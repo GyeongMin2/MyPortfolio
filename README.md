@@ -38,7 +38,7 @@
 
 ## 주요 프로젝트
 ### 1. [TSPOON]
-> 간단한 프로젝트 설명
+> 회원가입, 로그인, 자동 로그인, 게시판 CRUD, 쪽지 기능 구현
 
 **역할**: 백엔드 개발
 **기술 스택**: Java, Servlet, JSP, MySQL, Tomcat
@@ -75,6 +75,7 @@
 - 성능 개선
 
 [github](https://github.com/TheLastOnlineLecture/onlineLecture)
+[주요 소스코드](project/onlineLecture/onlineLecture_project.md)
 
 
 ## 📈 기술적 성과

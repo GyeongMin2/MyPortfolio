@@ -1,0 +1,152 @@
+.myPageMenu {
+  border: 1px solid #ddd;
+}
+
+.myPageMenuGroup {
+  display: flex;
+}
+
+.myPageMenuGroupContent {
+  border: 1px solid #ddd;
+  width: 300px;
+  height: 50px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myPageContent {
+  width: 300px;
+  height: 160px;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myProfileImg {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.gang {
+  display: inline-block;
+  width: 150px;
+  height: 110px;
+  background-color: #008cd6;
+  color: white;
+  text-align: center;
+  position: relative;
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+}
+
+.gang p {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.gang span {
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+}
+
+.gang span:last-of-type {
+  font-size: 16px;
+  margin-top: -10px;
+}
+
+.myStudyVideo {
+  width: 1000px;
+  margin-top: 30px;
+}
+
+.noStudyVideo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myStudyArea {
+  border: 1px solid #ddd;
+  height: auto;
+  min-height: 300px;
+  padding: 20px;
+}
+
+.myStudyVideoList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.studyCard {
+  width: 180px;
+  min-height: 300px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.studyCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cardImage {
+  width: 100%;
+  height: 100px;
+  background-color: #008cd6;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.studyCard h4 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.studyCard p {
+  font-size: 14px;
+  color: #666;
+}
+
+.studyCardUpBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+#myLectureButton {
+  height: 30px;
+  background-color: white;
+  border: 1px solid #008cd6;
+  cursor: pointer;
+  margin: 0 20px 10px 0;
+  color: #008cd6;
+}
+
+.myProFile {
+  line-height: 1;
+}
+
+.marginTop100 {
+  margin-top: 100px;
+}

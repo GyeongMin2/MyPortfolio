@@ -1,0 +1,388 @@
+.boardContainer {
+  width: 1000px;
+  margin: 20px auto;
+}
+
+.boardFilter {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.boardFilter select,
+.boardFilter input,
+.boardFilter button {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.boardTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.boardTable th,
+.boardTable td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.boardTable th {
+  background-color: #f5f5f5;
+}
+
+.boardTable .label {
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.label.notice {
+  background-color: #ff5b5b;
+  color: white;
+}
+
+.label.free {
+  background-color: #5b9aff;
+  color: white;
+}
+
+.label.lecNotice {
+  background-color: #a17eac;
+  color: white;
+}
+
+.label.review {
+  background-color: #5bffc0;
+  color: white;
+}
+
+.label.qna {
+  background-color: #2ca0a8;
+  color: white;
+}
+
+.label.kor {
+  background-color: #f5a623;
+  color: white;
+}
+
+.label.mat {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.label.eng {
+  background-color: #50e3c2;
+  color: white;
+}
+
+.label.soc {
+  background-color: #7b8e9c;
+  color: white;
+}
+
+.label.sci {
+  background-color: #bd10e0;
+  color: white;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  padding: 5px 10px;
+}
+
+.pagination button.current-page {
+  color: #008cd6;
+}
+
+.boardFilter button {
+  cursor: pointer;
+}
+
+.areaDeployment {
+  border-top: 1px solid #ddd;
+}
+
+.boardBoxMain {
+  width: 1500px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.boardMenuGroup {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+
+.boardMenu {
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.boardTopBar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.boardDetailContainer {
+  width: 1200px;
+  min-height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  margin: 30px;
+}
+
+.mainArea {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.boardDetailContent {
+  padding: 20px;
+}
+
+.boardDetailUp {
+  margin-left: 30px;
+}
+
+.moveList a {
+  color: rgb(3, 199, 90);
+}
+
+.boardDetailTitle {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.boardDetailUserInfo {
+  display: flex;
+}
+
+.boardProfileImg {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+
+.boardRegdate {
+  color: rgb(151, 151, 151);
+  font-size: 14px;
+}
+
+.boardNick {
+  font-weight: bold;
+}
+
+.boardDetailUserInfoCon {
+  margin-left: 10px;
+}
+
+.boardCommentImg {
+  width: 20px;
+}
+
+.boardMainContent {
+  padding: 30px;
+}
+
+.boardDetailDown {
+  padding: 30px;
+}
+
+.menuQ {
+  width: 20px;
+  cursor: pointer;
+}
+
+.commentProfile {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+
+.commentUserArea {
+  display: flex;
+}
+
+.bottomBar {
+  display: none;
+  width: 100px;
+  height: auto;
+  background-color: white;
+  color: black;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 5px;
+  text-align: center;
+  padding: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.commentWrite {
+  margin-top: 30px;
+  padding: 10px;
+  border: 2px solid #ddd;
+  padding: 10px;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.commentMyNickName {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.commentWrite textarea {
+  width: 100%;
+  height: 80px;
+  border: none;
+  resize: none;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.commentWrite textarea:focus {
+  outline: none;
+  background-color: #f3f7ff;
+}
+
+.submitBtn {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.submitBtn:hover {
+  background-color: #357abd;
+}
+
+.submitBtn:active {
+  background-color: #2c5a8a;
+}
+
+.postWriteContainer {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.postTitle {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+}
+
+.postLabel {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.postInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.postTextarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  height: 150px;
+  resize: none;
+}
+
+.formActions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.submitBtn,
+.cancelBtn {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.submitBtn {
+  background-color: #4a90e2;
+  color: #fff;
+}
+
+.submitBtn:hover {
+  background-color: #357abd;
+}
+
+.cancelBtn {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.cancelBtn:hover {
+  background-color: #c0392b;
+}
+
+.charCount {
+  font-size: 14px;
+  margin-left: 10px;
+  color: black;
+}
+
+.overLimit {
+  color: red;
+}
+
+.commentBtn{
+	border:none;
+	background-color:white;
+	cursor:pointer;
+}
+
+.commentBtn:hover {
+	text-decoration:underline;
+}

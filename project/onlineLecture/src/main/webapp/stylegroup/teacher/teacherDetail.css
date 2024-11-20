@@ -1,0 +1,80 @@
+@charset "UTF-8";
+.teacherDetailImg {
+  width: 100%;
+  background-color: #e0f8fa;
+}
+
+.teacherInfo {
+  margin-top: 50px;
+}
+
+.teacherName {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.teacherProfile {
+  font-size: 20px;
+}
+
+.teacherDetailContainer {
+  width: 1000px;
+  margin-bottom: 20px;
+}
+
+.teacherLectureList {
+  margin-top: 30px;
+}
+
+.teacherCircleImg {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.teacherLectureListContent {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 10px 0 10px 0;
+}
+
+.teacherLectureArea {
+  margin-left: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lecturePayBtn {
+  border: 1px solid #008cd6;
+  margin-bottom: 20px;
+  padding: 10px;
+  color: #008cd6;
+  background-color: white;
+  display: block;
+  cursor: pointer;
+}
+
+.di {
+  display: flex;
+  align-items: center;
+}
+
+.best {
+  background-color: rgb(249, 105, 105);
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  margin-right: 10px;
+}
+
+.lectureTitleBold {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px 0 10px 0;
+}

@@ -1,0 +1,28 @@
+@charset "UTF-8";
+.lectureCon{
+	width:1500px;
+}
+
+.fl {
+	display: flex;
+}
+
+.lecture-content {
+	display:flex;
+	align-items:center;
+}
+
+.lecture-detail {
+	margin-bottom: 30px;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 15px;
+	min-width: 500px;
+}
+
+.back-btn {
+	border: 1px solid #ddd;
+	margin: 30px 0 30px 0;
+	background-color: #008CD6;
+	color: white;
+}

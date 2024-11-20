@@ -1,0 +1,113 @@
+@charset "UTF-8";
+.menuContainer3 {
+  background-color: #fff;
+  width: 1200px;
+}
+
+.paymentContent {
+  display: flex;
+}
+
+.paymentMenu {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.paymentMemInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.paymentArea {
+  width: 900px;
+  padding: 20px;
+}
+
+.paymentStep {
+  text-align: center;
+  margin: 20px;
+}
+
+.liGroup {
+  margin-left: 80px;
+  font-size: 14px;
+}
+
+.liGroup li {
+  list-style-type: circle;
+}
+
+.paymentTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.paymentTable th,
+.paymentTable td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.paymentTable th {
+  background-color: #f5f5f5;
+}
+
+.deleteBtn {
+  background-color: #ccc;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.deleteBtn:hover {
+  background-color: #aaa;
+}
+
+.totalPrice {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.actionButtons button {
+  background-color: #6c6c6c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.actionButtons .paySelected {
+  background-color: #7851a9;
+}
+
+.actionButtons button:hover {
+  background-color: #555;
+}
+
+.actionButtons .paySelected:hover {
+  background-color: #5d3b8a;
+}
+
+.paymentSuccessMessage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0 50px 0;
+}
+
+.paymentSuccessMessageArea {
+  margin-left: 20px;
+}
+

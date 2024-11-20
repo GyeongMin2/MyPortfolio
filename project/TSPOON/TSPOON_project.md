@@ -163,87 +163,82 @@ public class LoginCheckFilter implements Filter {
 - deleteAutoLoginCookie(): 만료된 토큰 처리
 - 로그인 상태를 request에 attribute로 설정
 
-### DbQueryUtil.java
+### CheckDuplicateId.java
 
+중복 아이디 체크를 위한 유틸리티 클래스입니다.
+
+백엔드 코드
 ```java
-public class DbQueryUtil implements AutoCloseable {
-
-    private PreparedStatement pstmt;
-    private ResultSet rs;
-
-    // 파라미터 있는 쿼리 문자열 배열 파라미터 받음
-    public DbQueryUtil(Connection conn, String sql, String[] parameters) throws SQLException {
-        this.pstmt = conn.prepareStatement(sql);
-
-        // 파라미터 binding
-        if (parameters != null) {
-            for (int i = 0; i < parameters.length; i++) {
-                pstmt.setString(i + 1, parameters[i]);
-            }
-        }
-    }
-
-    // 파라미터 있는 쿼리 Object 배열 파라미터 받음 (String || Integer)
-    //파일 업로드 시 파일 사이즈 받아오기 위해 Long 타입 추가
-    //null 처리 추가를 위해 다른파라미터들을 setObject로 변경후 setNull 추가 :(
-    public DbQueryUtil(Connection conn, String sql, Object[] parameters) throws SQLException {
-        this.pstmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-        if (parameters != null) {
-            for (int i = 0; i < parameters.length; i++) {
-                if (parameters[i] != null) {
-                    pstmt.setObject(i + 1, parameters[i]);
-                } else {
-                    pstmt.setNull(i + 1, java.sql.Types.NULL);
-                }
-            }
-        }
-    }
-
-    // 페이징용 또는 정수 필요하면  정수 배열 파라미터 받음
-    public DbQueryUtil(Connection conn, String sql, int[] parameters) throws SQLException {
-        this.pstmt = conn.prepareStatement(sql);
-
-        // 파라미터 binding
-        if (parameters != null) {
-            for (int i = 0; i < parameters.length; i++) {
-                pstmt.setInt(i + 1, parameters[i]);
-            }
-        }
-    }
-
-    public DbQueryUtil(Connection conn, String sql) throws SQLException {
-        this.pstmt = conn.prepareStatement(sql);
-    }
-
-    public ResultSet executeQuery() throws SQLException {
-        this.rs = pstmt.executeQuery();
-        return rs;
-    }
-
-    public int executeUpdate() throws SQLException {
-        return pstmt.executeUpdate();
-    }
-
-    public ResultSet getGeneratedKeys() throws SQLException {
-        return pstmt.getGeneratedKeys();
-    }
-
+@WebServlet(name = "CheckUserId", value = "/checkUserId.do")
+public class CheckUserId extends HttpServlet {
+    private MemberDAO memberDAO;
 
     @Override
-    public void close() throws SQLException {
-        if (rs != null) {
-            rs.close();
-        }
-        if (pstmt != null) {
-            pstmt.close();
-        }
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+            throws ServletException, IOException {
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+        memberDAO = new MemberDAO();
+        StringBuilder errorMessage = new StringBuilder();
+
+        String userId = request.getParameter("userId");
+        boolean isAvailable = false;
+
+        if (userId != null && !userId.trim().isEmpty()) {
+            try {
+                isAvailable = memberDAO.isUserIdAvailable(userId);
+            } catch (SQLException e) {
+                errorMessage.append("아이디 중복 검사 중 오류가 발생했습니다: " + e.getMessage());
+            }
+        }  
+
+        PrintWriter out = response.getWriter();
+        out.print(String.format("{\"available\": %b}", isAvailable));
+        out.flush();
     }
 }
 ```
+
+프론트엔드 코드 
+```html
+<div class="formBox">
+    <input type="text" id="userId" name="userId" placeholder="아이디" />
+    <label for="userId">아이디</label>
+    <button type="button" id="checkUserId">중복 확인</button>
+    <span id="userIdError">아이디를 입력해주세요.</span>
+</div>
+```
+
+```javascript
+checkUserIdButton.addEventListener('click', function () {
+    const userId = userIdInput.value.trim();
+    fetch('checkUserId.do?userId=' + encodeURIComponent(userId))
+        .then(response => response.json())
+        .then(data => {
+            if (data.available) {
+                userIdError.textContent = '사용 가능한 아이디입니다.';
+                userIdError.style.color = 'blue';
+                isUserIdAvailable = true;
+            } else {
+                userIdError.textContent = '이미 사용 중인 아이디입니다.';
+                userIdError.style.color = 'red';
+                isUserIdAvailable = false;
+            }
+            isUserIdChecked = true;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            userIdError.textContent = '아이디 중복 확인 중 오류가 발생했습니다.';
+            userIdError.style.color = 'red';
+            isUserIdAvailable = false;
+            isUserIdChecked = false;
+        });
+});
+```
 #### 주요 기능
-- 쿼리 실행 및 결과 반환
-- 파라미터 바인딩
-- 리소스 자동 닫기
+- ajax를 통한 아이디 중복 검사
+- 결과를 JSON 형식으로 반환
+
 
 ### Class Diagram & ERD
 ![classDiagram](https://github.com/GyeongMin2/MyPortfolio/blob/main/images/TSPOON/TSPOON_classdiagram.png)

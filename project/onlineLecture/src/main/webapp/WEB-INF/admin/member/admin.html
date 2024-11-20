@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 페이지</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        /* 네비게이션 바 스타일 */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+        }
+        /* 페이지 콘텐츠 스타일 */
+        .container {
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .search-container input {
+            padding: 10px;
+            width: 200px;
+            margin-right: 10px;
+        }
+        .search-container button {
+            padding: 10px 15px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .search-container button:hover {
+            background-color: #575757;
+        }
+        /* 테이블 스타일 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f0f0f0;
+        }
+        /* 페이징 스타일 */
+        .pagination {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .pagination a {
+            margin: 0 5px;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 네비게이션 바 -->
+    <div class="navbar">
+        <a href="#">회원 관리</a>
+        <a href="#">강의 관리</a>
+        <a href="#">게시판 관리</a>
+    </div>
+
+    <!-- 메인 콘텐츠 -->
+    <div class="container">
+        <h1>회원 관리</h1>
+
+        <!-- 검색 기능 -->
+         <form action="#" method="post">
+            <div class="search-container">
+                <input type="text" placeholder="회원 이름 검색" id="nameSearch">
+                <input type="text" placeholder="아이디 검색" id="idSearch">
+                <button type="submit">검색</button>
+            </div>
+        </form>
+
+        <!-- 회원 관리 테이블 -->
+        <table>
+            <thead>
+                <tr>
+                    <th>회원 이름</th>
+                    <th>회원 등급 (코드)</th>
+                    <th>아이디</th>
+                    <th>전화번호</th>
+                    <th>마일리지</th>
+                    <th>버튼</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>홍길동</td>
+                    <td>일반회원</td>
+                    <td>hong123</td>
+                    <td>010-1234-5678</td>
+                    <td>1000</td>
+                    <td><button>수정하기</button> | <button>강퇴</button></td>
+                </tr>
+                <tr>
+                    <td>김철수</td>
+                    <td>VIP</td>
+                    <td>kimvip</td>
+                    <td>010-9876-5432</td>
+                    <td>5000</td>
+                    <td><button>수정하기</button> | <button>강퇴</button></td>
+                </tr>
+                <tr>
+                    <td>이영희</td>
+                    <td>일반회원</td>
+                    <td>lee001</td>
+                    <td>010-5555-6666</td>
+                    <td>2000</td>
+                    <td><button>수정하기</button> | <button>강퇴</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- 페이징 -->
+        <div class="pagination">
+            <a href="#">[1]</a>
+            <a href="#">[2]</a>
+            <a href="#">[3]</a>
+            <a href="#">[4]</a>
+        </div>
+    </div>
+
+    <script>
+    </script>
+
+</body>
+</html>
