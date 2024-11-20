@@ -1,54 +1,26 @@
 # 백엔드 개발자 포트폴리오
 
-##### **최종 업데이트**: 2024년 11월 20일
+> **최종 업데이트**: 2024년 11월 20일
 
-***
-
-## 👋 소개
-안녕하세요! 백엔드 개발자를 목표로 하는 [강경민]입니다.
+## 소개
+안녕하세요! 백엔드 개발자를 목표로 하는 강경민 입니다.
 - 서버 개발과 시스템 아키텍처에 관심이 많습니다
 - 클린 코드와 테스트 작성을 중요하게 생각합니다
 - 코드 리뷰를 통해 성장하는 것을 중요하게 생각합니다
 
 ## 기술 스택
-### 언어
-![Java](https://img.shields.io/badge/Java-007396?style=flat-square&logo=Java&logoColor=white) 
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white) 
+- **Backend**: ![Java](https://img.shields.io/badge/Java-007396?style=flat-square&logo=Java&logoColor=white) ![Spring](https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=Spring&logoColor=white) ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33D?style=flat-square&logo=Spring_Boot&logoColor=white)
 
-### 프레임워크 & 라이브러리
-![Spring](https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=Spring&logoColor=white) 
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33D?style=flat-square&logo=Spring_Boot&logoColor=white) 
+- **DBMS**: ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white) ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=MariaDB&logoColor=white)
 
-### ORM & 데이터 처리
-![JPA](https://img.shields.io/badge/JPA-6DB33F?style=flat-square&logo=Spring&logoColor=white)
-![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=flat-square&logo=Hibernate&logoColor=white)
-![MyBatis](https://img.shields.io/badge/MyBatis-000000?style=flat-square)
+- **ORM**: ![JPA](https://img.shields.io/badge/JPA-6DB33F?style=flat-square&logo=Spring&logoColor=white) ![Hibernate](https://img.shields.io/badge/Hibernate-59666C?style=flat-square&logo=Hibernate&logoColor=white) ![MyBatis](https://img.shields.io/badge/MyBatis-000000?style=flat-square)
 
-### 데이터베이스
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white)
-![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=MariaDB&logoColor=white)
+- **DevOps & Tools**: ![AWS_RDS](https://img.shields.io/badge/Amazon_RDS-232F3E?style=flat-square&logo=amazonrds&logoColor=white) ![Azure](https://img.shields.io/badge/Azure-0089D6?style=flat-square&logo=MicrosoftAzure&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=Git&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white)
 
-### 프로토콜 & 통신
-![WebSocket](https://img.shields.io/badge/WebSocket-000000?style=flat-square&logo=WebSocket&logoColor=white)
+- **Others**: ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white) ![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white) ![WebSocket](https://img.shields.io/badge/WebSocket-000000?style=flat-square&logo=WebSocket&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=Linux&logoColor=black)
 
-### 서버 & WAS
-![Tomcat](https://img.shields.io/badge/Tomcat-F8DC75?style=flat-square&logo=ApacheTomcat&logoColor=black)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white)
-
-### 인프라 & 도구
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=AmazonAWS&logoColor=white)
-![Azure](https://img.shields.io/badge/Azure-0089D6?style=flat-square&logo=MicrosoftAzure&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=Git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white)
-![letsEncrypt](https://img.shields.io/badge/Let's_Encrypt-003A70?style=flat-square&logo=Let%27sEncrypt&logoColor=white)
-
-### OS
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=Linux&logoColor=black)
-![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=flat-square&logo=Ubuntu&logoColor=white)
-
-***
-## 📝 주요 프로젝트
-### 1.🥄[TSPOON]
+## 주요 프로젝트
+### 1.[TSPOON]
 > 이 프로젝트는 회원가입, 로그인, 게시판 CRUD, 쪽지 기능 등을 포함하고 있습니다.
 
 **역할**: 백엔드 개발
@@ -69,13 +41,11 @@
 - 확장성 (모듈화된 구조, MVC 패턴적용)
 - 데이터 무결성 (트랜잭션 처리, 사용자 권한 검증)
 
-+ [프레젠테이션](project/TSPOON/TSPOON_porject.pdf)
-+ [주요 소스코드](project/TSPOON/TSPOON_project.md)
-+ [github](https://github.com/GyeongMin2/MyPortfolio/tree/main/project/TSPOON/src/main/java)
+**[프레젠테이션](project/TSPOON/TSPOON_porject.pdf)** | **[주요 소스코드](project/TSPOON/TSPOON_project.md)** | **[github](https://github.com/GyeongMin2/MyPortfolio/tree/main/project/TSPOON/src/main/java)**
 
 ***
 
-### 2.🎥[onlineLecture]
+### 2.[onlineLecture]
 > 이 프로젝트는 온라인 강의 플랫폼으로, 강의 관리, 사용자 인증 등의 기능을 포함하고 있습니다.
 
 **역할**: 백엔드개발 및 공통 모듈 설계 및 DB설계 및 DDL관리, 홈서버 구축 및 배포
@@ -99,12 +69,11 @@
 - 첫 협업 프로젝트 경험
   - 의사소통 및 협업 능력 향상
 
-+ [github](https://github.com/TheLastOnlineLecture/onlineLecture)
-+ [주요 소스코드](project/onlineLecture/onlineLecture_project.md)
+**[주요 소스코드](project/onlineLecture/onlineLecture_project.md)** | **[github](https://github.com/TheLastOnlineLecture/onlineLecture)** 
 
 ***
 
-### 3.🎒[eduSecond]
+### 3.[eduSecond]
 >이 프로젝트는 중고 거래 플랫폼으로, 중고 물품 거래 및 채팅 기능을 포함하고 있습니다.
 
 **역할**: 백엔드 개발
@@ -132,11 +101,11 @@
     - 실패 시 롤백 처리로 데이터 일관성 유지
   - 필터를 통한 관리자 인증 및 권한 검증
 
-+ [github](https://github.com/eduSecond)
-+ [주요 소스코드](project/eduSecond/eduSecond_project.md)
-+ [프레젠테이션](project/eduSecond/eduSecond_project.pdf)
+**[프레젠테이션](project/eduSecond/eduSecond_project.pdf)** | **[주요 소스코드](project/eduSecond/eduSecond_project.md)** | **[github](https://github.com/eduSecond)**
 
-## 📈 기술적 성과
+***
+
+## 기술적 성과
 - **홈서버 구축 및 배포**
   - SSL 인증서를 Let's Encrypt를 통해 설정하여 웹 애플리케이션의 보안을 강화
   - 포트포워딩 설정을 통해 웹 애플리케이션 배포
@@ -145,26 +114,25 @@
 - **크론탭과 스케쥴러를 통한 리소스 모니터링**
   - java와 크론탭을 통해 리소스 모니터링 및 로그 저장
 
-
-## 🎓 교육
+## 교육
 - 명지전문대학 | 소프트웨어 콘텐츠학과 (2024년 8월)
 - 천재교육 | java fullstack 개발자 과정 (2024년 7월 ~ 2025년 1월)
-- 상원고등학교 (2020년 1월)
 
-## 📑 자격증 & 수상
+## 자격증 & 수상
 - 자격증명 (취득연도)
 - 수상 내역
 
-## 📞 연락처
+## 연락처
 - 이메일: kgmmsw101@gmail.com
 - GitHub: [GyeongMin2](https://github.com/GyeongMin2)
 
-## 🧑‍💻 토이 프로젝트
+## 토이 프로젝트
 
-### 1.🧑‍💻[javaSimpleBoard](https://github.com/GyeongMin2/javaSimpleBoard)
+### 1.[javaSimpleBoard](https://github.com/GyeongMin2/javaSimpleBoard)
 > java, jdbc,mysql을 이용한 cli기반 게시판
 +[주요 소스코드](toyProject/javaSimpleBoard_project.md)
 
-### 2.🧑‍💻[javaPlayground](https://github.com/GyeongMin2/javaPlayground)
+### 2.[javaPlayground](https://github.com/GyeongMin2/javaPlayground)
 > java, jdbc, mysql을 이용한 리소스모니터 및 저수준 소켓통신 구현 (server,client)
 +[주요 소스코드](toyProject/javaPlayground_project.md)
+
