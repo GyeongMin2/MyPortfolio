@@ -118,10 +118,6 @@
 - 명지전문대학 | 소프트웨어 콘텐츠학과 (2024년 8월)
 - 천재교육 | java fullstack 개발자 과정 (2024년 7월 ~ 2025년 1월)
 
-<!-- ## 자격증 & 수상
-- 자격증명 (취득연도)
-- 수상 내역 -->
-
 ## 연락처
 - 이메일: kgmmsw101@gmail.com
 - GitHub: [GyeongMin2](https://github.com/GyeongMin2)
