@@ -118,9 +118,9 @@
 - 명지전문대학 | 소프트웨어 콘텐츠학과 (2024년 8월)
 - 천재교육 | java fullstack 개발자 과정 (2024년 7월 ~ 2025년 1월)
 
-## 자격증 & 수상
+<!-- ## 자격증 & 수상
 - 자격증명 (취득연도)
-- 수상 내역
+- 수상 내역 -->
 
 ## 연락처
 - 이메일: kgmmsw101@gmail.com
@@ -130,9 +130,9 @@
 
 ### 1.[javaSimpleBoard](https://github.com/GyeongMin2/javaSimpleBoard)
 > java, jdbc,mysql을 이용한 cli기반 게시판
-+[주요 소스코드](toyProject/javaSimpleBoard_project.md)
++ [주요 소스코드](toyProject/javaSimpleBoard_project.md)
 
 ### 2.[javaPlayground](https://github.com/GyeongMin2/javaPlayground)
 > java, jdbc, mysql을 이용한 리소스모니터 및 저수준 소켓통신 구현 (server,client)
-+[주요 소스코드](toyProject/javaPlayground_project.md)
++ [주요 소스코드](toyProject/javaPlayground_project.md)
 
