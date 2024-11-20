@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.fullstack7.edusecond.edusecond.mapper.PaymentMapper">
+    <insert id="insert">
+        INSERT INTO tbl_order(
+            productId, unitPrice, totalPrice, buyerId, orderQuantity, recipientName, recipientPhone, recipientEmail, shippingAddress, shippingPostcode,
+            paymentMethod, paymentCompany, paymentNumber
+        )
+        VALUES (
+           #{productId}, #{unitPrice}, #{totalPrice}, #{buyerId}, #{orderQuantity}, #{recipientName}, #{recipientPhone}, #{recipientEmail}, #{shippingAddress}, #{shippingPostcode},
+           #{paymentMethod}, #{paymentCompany}, #{paymentNumber}
+           );
+    </insert>
+
+    <select id="getPaymentInfo" resultType="net.fullstack7.edusecond.edusecond.dto.payment.PaymentDTO">
+        SELECT * FROM tbl_order
+        WHERE paymentNumber = #{paymentNumber}
+    </select>
+
+    <insert id="insert_1">
+        INSERT INTO tbl_order(
+            productId, unitPrice, totalPrice, buyerId, orderQuantity, recipientName, recipientPhone, recipientEmail, shippingAddress, shippingPostcode,
+            paymentMethod, paymentCompany, paymentNumber, deliveryStatus, orderStatus
+        )
+        VALUES (
+                   #{productId}, #{unitPrice}, #{totalPrice}, #{buyerId}, #{orderQuantity}, #{recipientName}, #{recipientPhone}, #{recipientEmail}, #{shippingAddress}, #{shippingPostcode},
+                   #{paymentMethod}, #{paymentCompany}, #{paymentNumber}, #{deliveryStatus}, #{orderStatus}
+               );
+    </insert>
+</mapper>

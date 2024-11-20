@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.fullstack7.edusecond.edusecond.mapper.ReviewMapper">
+    <insert id="insertReview">
+        INSERT INTO tbl_review
+        (orderId, writerId, content, rating)
+        VALUES
+        (#{orderId}, #{writerId}, #{content}, #{rating})
+    </insert>
+    <select id="viewReview" parameterType="java.lang.Integer" resultType="net.fullstack7.edusecond.edusecond.domain.review.ReviewVO">
+        SELECT
+            r.reviewId,
+            r.orderId,
+            r.writerId,
+            r.content,
+            r.rating,
+            r.regDate
+        FROM tbl_review r
+                 LEFT JOIN tbl_order o ON r.orderId = o.orderId
+        WHERE o.productId = #{productId}
+    </select>
+</mapper>
+
+

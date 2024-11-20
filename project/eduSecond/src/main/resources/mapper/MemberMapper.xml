@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.fullstack7.edusecond.edusecond.mapper.MemberMapper">
+    
+    <select id="selectMemberById" resultType="net.fullstack7.edusecond.edusecond.domain.member.MemberVO">
+        SELECT * 
+        FROM tbl_member 
+        WHERE userId = #{userId}
+        AND enabled != 'N'
+    </select>
+    
+    <insert id="insertMember">
+        INSERT INTO tbl_member (
+            userId, userPw, userName, userEmail, 
+            userPhone, userAddress, userPostcode, userBirth
+        ) VALUES (
+            #{userId}, #{userPw}, #{userName}, #{userEmail}, 
+            #{userPhone}, #{userAddress}, #{userPostcode}, #{userBirth}
+        )
+    </insert>
+
+    <select id="getLoginMember" resultType="net.fullstack7.edusecond.edusecond.domain.member.MemberVO">
+        SELECT userId, userName, enabled
+        FROM tbl_member
+        WHERE userId = #{userId}
+    </select>
+
+    <!-- 관리자 기능용 쿼리들 -->
+    <select id="selectTotalCount" resultType="int">
+        SELECT COUNT(*) FROM tbl_member
+        <where>
+            <if test="searchCategory != null and searchValue != null">
+                <choose>
+                    <when test="searchCategory == 'userId'">
+                        userId LIKE CONCAT('%', #{searchValue}, '%')
+                    </when>
+                    <when test="searchCategory == 'userName'">
+                        userName LIKE CONCAT('%', #{searchValue}, '%')
+                    </when>
+                    <when test="searchCategory == 'userEmail'">
+                        userEmail LIKE CONCAT('%', #{searchValue}, '%')
+                    </when>
+                </choose>
+            </if>
+        </where>
+    </select>
+
+    <select id="selectList" resultType="net.fullstack7.edusecond.edusecond.domain.member.MemberVO">
+        SELECT 
+            userId,
+            userName,
+            userEmail,
+            userPhone,
+            userAddress,
+            userPostcode,
+            userBirth,
+            enabled,
+            regDate,
+            modifyDate
+        FROM tbl_member
+        <where>
+            <if test="searchCategory != null and searchValue != null">
+                <choose>
+                    <when test="searchCategory == 'userId'">
+                        userId LIKE CONCAT('%', #{searchValue}, '%')
+                    </when>
+                    <when test="searchCategory == 'userName'">
+                        userName LIKE CONCAT('%', #{searchValue}, '%')
+                    </when>
+                    <when test="searchCategory == 'userEmail'">
+                        userEmail LIKE CONCAT('%', #{searchValue}, '%')
+                    </when>
+                </choose>
+            </if>
+        </where>
+        ORDER BY regDate DESC
+        LIMIT #{offset}, #{limit}
+    </select>
+
+    <update id="updateEnabled">
+        UPDATE tbl_member 
+        SET enabled = #{enabled},
+            modifyDate = CURRENT_TIMESTAMP
+        WHERE userId = #{userId}
+    </update>
+
+    <update id="updateMember">
+        UPDATE tbl_member
+        SET userEmail = #{userEmail}, userPhone = #{userPhone}, userAddress = #{userAddress}, userBirth = #{userBirth}, userPostcode = #{userPostcode}
+        WHERE userId = #{userId}
+    </update>
+
+    <delete id="deleteMember">
+        DELETE FROM tbl_member
+        WHERE userId = #{userId}
+    </delete>
+
+    <select id="myProductCount" resultType="net.fullstack7.edusecond.edusecond.dto.member.MypageDTO">
+        SELECT
+            (SELECT COUNT(*) FROM tbl_product WHERE sellerId = #{userId} AND tbl_product.productStatus = 'AVAILABLE') AS productAvailableCount,
+            (SELECT COUNT(*) FROM tbl_product WHERE sellerId = #{userId} AND tbl_product.productStatus = 'SOLDOUT') AS productSoldCount,
+            (SELECT  COUNT(r.reviewId) FROM tbl_product AS p
+                LEFT OUTER JOIN  tbl_order AS o ON p.productId = o.productId
+                LEFT OUTER join tbl_review AS r ON o.orderId = r.orderId
+             WHERE p.sellerId = #{userId}) AS reviewCount,
+            (SELECT COUNT(*) FROM tbl_wishlist WHERE userId = #{userId}) AS wishListCount
+    </select>
+
+    <update id="updateMemberWithdrawal">
+        UPDATE tbl_member
+        SET enabled = 'N',
+            userName = '(탈퇴한 회원)',
+            modifyDate = CURRENT_TIMESTAMP
+        WHERE userId = #{userId}
+    </update>
+
+    <update id="updateProductStatusByUserId">
+        UPDATE tbl_product
+        SET productStatus = 'UNAVAILABLE',
+            modifyDate = CURRENT_TIMESTAMP
+        WHERE sellerId = #{userId}
+    </update>
+
+    <select id="selectWithdrawalList" resultType="net.fullstack7.edusecond.edusecond.domain.member.MemberVO">
+        SELECT *
+        FROM tbl_member
+        WHERE enabled = 'Q'
+        <if test="searchCategory != null and searchValue != null">
+            <choose>
+                <when test="searchCategory == 'userId'">
+                    AND userId LIKE CONCAT('%', #{searchValue}, '%')
+                </when>
+                <when test="searchCategory == 'userName'">
+                    AND userName LIKE CONCAT('%', #{searchValue}, '%')
+                </when>
+            </choose>
+        </if>
+        ORDER BY modifyDate DESC
+        LIMIT #{offset}, #{limit}
+    </select>
+
+    <select id="selectWithdrawalTotalCount" resultType="int">
+        SELECT COUNT(*)
+        FROM tbl_member
+        WHERE enabled = 'Q'
+        <if test="searchCategory != null and searchValue != null">
+            <choose>
+                <when test="searchCategory == 'userId'">
+                    AND userId LIKE CONCAT('%', #{searchValue}, '%')
+                </when>
+                <when test="searchCategory == 'userName'">
+                    AND userName LIKE CONCAT('%', #{searchValue}, '%')
+                </when>
+            </choose>
+        </if>
+    </select>
+</mapper>

@@ -1,5 +1,9 @@
 # 백엔드 개발자 포트폴리오
 
+**최종 업데이트**: 2024년 11월 20일
+
+***
+
 ## 소개
 안녕하세요! 백엔드 개발자를 목표로 하는 [강경민]입니다.
 - 서버 개발과 시스템 아키텍처에 관심이 많습니다
@@ -38,7 +42,7 @@
 
 ## 주요 프로젝트
 ### 1. [TSPOON]
-> 회원가입, 로그인, 자동 로그인, 게시판 CRUD, 쪽지 기능 구현
+> 이 프로젝트는 회원가입, 로그인, 게시판 CRUD, 쪽지 기능 등을 포함하고 있습니다.
 
 **역할**: 백엔드 개발
 **기술 스택**: Java, Servlet, JSP, MySQL, Tomcat
@@ -48,7 +52,7 @@
   - 비밀번호 암호화 처리 (SHA-256, Salt)
   - 자동 로그인 처리 (쿠키)
 - 게시판 CRUD
-  - Ajax 통신을 이용한 비동기 페이징
+  - 쪽지및 게시판 불러오기 시 ajax 통신을 통해 비동기 처리
 - 쪽지
   - 쪽지 쓰기, 쪽지 읽기, 쪽지 삭제
   - 프로시저를 이용한 논리적인 쪽지 삭제 및 물리적인 삭제 분리
@@ -58,24 +62,68 @@
 - 확장성 (모듈화된 구조, MVC 패턴적용)
 - 데이터 무결성 (트랜잭션 처리, 사용자 권한 검증)
 
-[프레젠테이션](project/TSPOON/TSPOON_porject.pdf)
-[주요 소스코드](project/TSPOON/TSPOON_project.md)
++ [프레젠테이션](project/TSPOON/TSPOON_porject.pdf)
++ [주요 소스코드](project/TSPOON/TSPOON_project.md)
++ [github](https://github.com/GyeongMin2/MyPortfolio/tree/main/project/TSPOON/src/main/java)
+
+***
 
 ### 2. [onlineLecture]
-> 간단한 프로젝트 설명
+> 이 프로젝트는 온라인 강의 플랫폼으로, 강의 관리, 사용자 인증 등의 기능을 포함하고 있습니다.
 
-**역할**: 백엔드개발 및 DB설계, 관리
-**기술 스택**: Java, Servlet, JSP, MySQL, Tomcat
+**역할**: 백엔드개발 및 공통 모듈 설계 및 DB설계 및 DDL관리, 홈서버 구축 및 배포
+**기술 스택**: Java, Servlet, JSP, MySQL, Tomcat, SSL 배포
 **주요 기능**:
-- 강의 영역
+- 회원가입, 로그인, 강의 구매, 결제, 관리자 페이지등 다양한 기능 구현
+- 관리자 페이지에서 강의 관리, 회원 관리등 기능구현
+- DB 설계 및 DDL 관리 SSH를 통한 DB접속 및 관리
+- 홈서버 구축 및 배포 및 SSL 인증서를 Let's Encrypt를 통해 설정하여 웹 애플리케이션의 보안을 강화
 
 **성과**:
-- 데이터베이스 최적화를 통해 응답 시간 30% 개선
-- 시스템 아키텍처 설계
-- 성능 개선
+- 홈서버 구축 및 배포
+  - SSL 인증서를 Let's Encrypt를 통해 설정하여 웹 애플리케이션의 보안을 강화
+  - 포트포워딩 설정을 통해 웹 애플리케이션 배포
+- 데이터베이스 관리
+  - DB 설계 및 DDL 관리
+  - SSH를 통한 DB접속 및 관리
+- 공통 모듈(유틸) 설계
+  - 모듈화된 구조, MVC 패턴적용
+  - 클린 코드 작성
+- 첫 협업 프로젝트 경험
+  - 의사소통 및 협업 능력 향상
 
-[github](https://github.com/TheLastOnlineLecture/onlineLecture)
-[주요 소스코드](project/onlineLecture/onlineLecture_project.md)
++ [github](https://github.com/TheLastOnlineLecture/onlineLecture)
++ [주요 소스코드](project/onlineLecture/onlineLecture_project.md)
+
+***
+
+### 3. [eduSecond]
+>이 프로젝트는 중고 거래 플랫폼으로, 중고 물품 거래 및 채팅 기능을 포함하고 있습니다.
+
+**역할**: 백엔드 개발
+**기술 스택**: Java, Servlet, JSP, MySQL, Tomcat, Spring, WebSocket
+**주요 기능**:
+- 회원가입, 로그인, 중고 물품 등록,수정,삭제 기능 구현
+- 중고물품 거래 프로세스 구현
+- 채팅 기능
+  - 채팅방 생성, 채팅방 입장, 채팅방 퇴장, 채팅 기능
+  - WebSocket과 http 하이브리드 통신 구현
+- 관리자 페이지
+  - 중고 물품 관리, 회원 관리 기능 구현
+
+**성과**:
+- Spring MVC,Web을 활용한 확장성 있는 웹 애플리케이션 구현
+- MyBatis를 활용한 데이터베이스 처리
+- 실시간 1:1 채팅 시스템 구현
+  - Spring WebSocket을 활용한 실시간 양방향 통신 구현
+  - WebSocket과 HTTP를 결합한 하이브리드 통신으로 성능 최적화
+  - 채팅 메시지 영구 저장 및 이전 대화 내역 조회 기능 구현
+  - 읽지 않은 메시지 알림 기능 구현
+- 관리자 페이지 시스템 설계 및 구현
+  - 트랜잭션 관리를 통한 데이터 정합성 보장
+    - 회원 탈퇴 시 관련 데이터(게시글, 댓글, 채팅 등) 일괄 처리
+    - 실패 시 롤백 처리로 데이터 일관성 유지
+
 
 
 ## 📈 기술적 성과
@@ -85,15 +133,23 @@
 - [그 외 기술적 성과들]
 
 ## 🎓 교육
-- 학교명 | 전공 (졸업연도)
-- 관련 교육 이수 내역
+- 명지전문대학 | 소프트웨어 콘텐츠학과 (2024년 8월)
+- 
 
 ## 📑 자격증 & 수상
 - 자격증명 (취득연도)
 - 수상 내역
 
 ## 📞 연락처
-- 이메일: example@email.com
+- 이메일: kgmmsw101@gmail.com
 - GitHub: [GitHub 프로필 링크]
-- 블로그: [기술 블로그 링크]
-- LinkedIn: [LinkedIn 프로필 링크]
+
+## 토이 프로젝트
+
+### 1.[javaSimpleBoard](https://github.com/GyeongMin2/javaSimpleBoard)
+> java, jdbc를 이용한 cli기반 게시판
+
+### 2.[javaPlayground](https://github.com/GyeongMin2/javaPlayground)
+> java, jdbc, mysql 을 이용한 리소스모니터 및 저수준 소켓통신 구현
+
+

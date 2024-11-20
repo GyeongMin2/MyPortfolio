@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.fullstack7.edusecond.edusecond.mapper.OrderMapper">
+    <select id="getOrderList" parameterType="map" resultType="net.fullstack7.edusecond.edusecond.dto.order.OrderListDTO">
+        SELECT o.*, p.sellerId, p.productName, p.productDesc, p.productStatus, i.imagePath, r.reviewId
+        FROM tbl_order AS o
+                 INNER JOIN tbl_product AS p ON o.productId = p.productId
+                 LEFT OUTER join tbl_product_image AS i ON p.productId = i.productId
+                 LEFT OUTER JOIN tbl_review as r ON r.orderId = o.orderId
+        WHERE o.buyerId = #{userId} AND (i.isMain = 'Y' OR i.isMain IS NULL)
+        <if test="searchValue != null and !searchValue.trim().isEmpty()">
+            AND ${searchCategory} LIKE CONCAT('%', #{searchValue}, '%')
+        </if>
+        ORDER BY o.regDate DESC
+        LIMIT #{offset}, #{limit}
+    </select>
+
+    <select id="totalCount" parameterType="map" resultType="java.lang.Integer">
+        SELECT COUNT(o.orderId)
+        FROM tbl_order AS o
+        INNER JOIN tbl_product AS p ON o.productId = p.productId
+        LEFT OUTER join tbl_product_image AS i ON p.productId = i.productId
+        WHERE o.buyerId = #{userId} AND (i.isMain = 'Y' OR i.isMain IS NULL)
+            <if test="searchValue != null and !searchValue.trim().isEmpty()">
+                AND ${searchCategory} LIKE CONCAT('%', #{searchValue}, '%')
+            </if>
+    </select>
+
+    <select id="getOrderListSold" parameterType="map" resultType="net.fullstack7.edusecond.edusecond.dto.order.OrderListDTO">
+        SELECT o.*, p.sellerId, p.productName, p.productDesc, p.productStatus, i.imagePath
+        FROM tbl_order AS o
+        INNER JOIN tbl_product AS p ON o.productId = p.productId
+        LEFT OUTER join tbl_product_image AS i ON p.productId = i.productId
+        WHERE p.sellerId = #{userId} AND (i.isMain = 'Y' OR i.isMain IS NULL)
+        <if test="searchValue != null and !searchValue.trim().isEmpty()">
+            AND ${searchCategory} LIKE CONCAT('%', #{searchValue}, '%')
+        </if>
+        ORDER BY o.regDate DESC
+        LIMIT #{offset}, #{limit}
+    </select>
+
+    <select id="totalCountSold" parameterType="map" resultType="java.lang.Integer">
+        SELECT COUNT(o.orderId)
+        FROM tbl_order AS o
+        INNER JOIN tbl_product AS p ON o.productId = p.productId
+        LEFT OUTER join tbl_product_image AS i ON p.productId = i.productId
+        WHERE p.sellerId = #{userId} AND (i.isMain = 'Y' OR i.isMain IS NULL)
+        <if test="searchValue != null and !searchValue.trim().isEmpty()">
+            AND ${searchCategory} LIKE CONCAT('%', #{searchValue}, '%')
+        </if>
+    </select>
+
+    <update id="confirmPurchase">
+        UPDATE tbl_order
+        SET deliveryStatus = '배송완료/구매확정'
+        WHERE paymentNumber = #{paymentNumber} AND deliveryStatus = '배송중'
+    </update>
+
+    <update id="startDelivery">
+        UPDATE tbl_order
+        SET deliveryStatus = '배송중'
+        WHERE paymentNumber = #{paymentNumber} AND deliveryStatus = '배송전'
+    </update>
+
+    <update id="confirm">
+        UPDATE tbl_order
+        SET orderStatus = '구매완료'
+        WHERE paymentNumber = #{paymentNumber} AND orderStatus = '구매대기'
+    </update>
+
+    <update id="reject">
+        UPDATE tbl_order
+        SET orderStatus = '구매거부'
+        WHERE paymentNumber = #{paymentNumber} AND orderStatus = '구매대기'
+    </update>
+
+    <select id="getOrder">
+        SELECT *
+        FROM tbl_order
+        WHERE orderId = #{orderId}
+    </select>
+
+    <update id="direct">
+        UPDATE tbl_order
+        SET orderStatus = '직거래 완료', deliveryStatus = '직거래 완료'
+        WHERE paymentNumber = #{paymentNumber} AND orderStatus = '직거래'
+    </update>
+</mapper>    

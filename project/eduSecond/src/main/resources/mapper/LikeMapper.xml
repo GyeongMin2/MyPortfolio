@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.fullstack7.edusecond.edusecond.mapper.LikeMapper">
+    <insert id="insertLike">
+        INSERT INTO tbl_wishlist (userId, productId)
+        VALUES (#{userId}, #{productId})
+    </insert>
+    <delete id="deleteLike">
+        DELETE FROM tbl_wishlist
+        WHERE userId = #{userId} AND productId = #{productId}
+    </delete>
+    <select id="getLike" resultType="net.fullstack7.edusecond.edusecond.domain.product.LikeVO">
+        SELECT wishId, userId, productId, regDate
+        FROM tbl_wishlist
+        WHERE userId = #{userId} AND productId = #{productId}
+    </select>
+    <select id="checkExists" resultType="boolean">
+        SELECT COUNT(wishId)
+        FROM tbl_wishlist
+        WHERE userId = #{userId} AND productId = #{productId}
+    </select>
+    <delete id="deleteByUserId">
+        DELETE FROM tbl_wishlist
+        WHERE userId = #{userId}
+    </delete>
+
+</mapper>
