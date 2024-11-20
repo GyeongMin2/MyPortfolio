@@ -246,6 +246,6 @@ public class DbQueryUtil implements AutoCloseable {
 - 리소스 자동 닫기
 
 ### Class Diagram & ERD
-![classDiagram](https://github.com/GyeongMin2/MyPortfolio/blob/main/images/TSPOON/TSPOON_ERD.png)
+![classDiagram](https://github.com/GyeongMin2/MyPortfolio/blob/main/images/TSPOON/TSPOON_classdiagram.png)
 
-![erd](images/TSPOON/TSPOON_ERD.png)
+![erd]([images/TSPOON/TSPOON_ERD.png](https://github.com/GyeongMin2/MyPortfolio/blob/main/images/TSPOON/TSPOON_ERD.png))
