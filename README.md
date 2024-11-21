@@ -1,6 +1,6 @@
 # 백엔드 개발자 포트폴리오
 
-> **최종 업데이트**: 2024년 11월 20일
+> **최종 업데이트**: 2024년 11월 21일
 
 ## 소개
 안녕하세요! 백엔드 개발자를 목표로 하는 강경민 입니다.
@@ -69,7 +69,7 @@
 - 첫 협업 프로젝트 경험
   - 의사소통 및 협업 능력 향상
 
-**[주요 소스코드](project/onlineLecture/onlineLecture_project.md)** | **[github](https://github.com/TheLastOnlineLecture/onlineLecture)** 
+**[프레젠테이션](project/onlineLecture/onlinLecture_project.pdf)** | **[주요 소스코드](project/onlineLecture/onlineLecture_project.md)** | **[github](https://github.com/TheLastOnlineLecture/onlineLecture)** 
 
 ***
 
