@@ -128,7 +128,7 @@
 
 ### 1.[javaSimpleBoard](https://github.com/GyeongMin2/javaSimpleBoard)
 > java, jdbc,mysql을 이용한 cli기반 게시판
-+ [주요 소스코드](toyProject/javasimpleBoard/javaSimpleBoard_project.md)
++ [주요 소스코드](toyProject/javaSimpleBoard/javaSimpleBoard_project.md)
 
 ### 2.[javaPlayground](https://github.com/GyeongMin2/javaPlayground)
 > java, jdbc, mysql을 이용한 리소스모니터 및 저수준 소켓통신 구현 (server,client)
