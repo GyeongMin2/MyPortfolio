@@ -190,12 +190,12 @@ public CourseDetailDTO getCourseWithContents(int courseId) {
   - 읽기 전용 트랜잭션 최적화
   - 데이터 정합성 보장
 
-### Class Diagram & ERD
-![classDiagram](https://github.com/GyeongMin2/MyPortfolio/blob/main/images/mooc/mooc_classdiagram.png)
-
-![erd](https://github.com/GyeongMin2/MyPortfolio/blob/main/images/mooc/mooc_ERD.png)
-
 ### api 명세서
 [@api 문서 markdown](https://github.com/KmoocProject/mooc/blob/main/project_note/api/api.md)
 ![api-image-1](https://github.com/KmoocProject/mooc/blob/main/project_note/api/api1.png)
 ![api-image-2](https://github.com/KmoocProject/mooc/blob/main/project_note/api/api2.png)
+
+### Class Diagram & ERD
+![classDiagram](https://github.com/GyeongMin2/MyPortfolio/blob/main/images/mooc/mooc_%08classdiagram.png)
+
+![erd](https://github.com/GyeongMin2/MyPortfolio/blob/main/images/mooc/mooc_ERD.png)
