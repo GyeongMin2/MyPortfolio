@@ -179,8 +179,10 @@
 - 인덱싱을 통한 속도 향상
   - 자주 조회되는 테이블에 인덱싱 추가
     - ActiveTokens 테이블에 인덱싱 추가 (해당 테이블은 토큰의 유효성을 검사하는 테이블이라 자주 조회되었음)
+
 **[프레젠테이션](project/studyShare/studyShare_project.pdf)** | **[주요 소스코드 리뷰](project/studyShare/studyShare_project.md)** | **[github](https://github.com/ChunjaeStudyShare/ChunjaeStudyShare)**
 
+***
 
 ## 기술적 성과
 - **홈서버 구축 및 배포**
