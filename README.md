@@ -17,14 +17,16 @@
 
 - **DevOps & Tools**: ![AWS_RDS](https://img.shields.io/badge/Amazon_RDS-232F3E?style=flat-square&logo=amazonrds&logoColor=white) ![Azure](https://img.shields.io/badge/Azure-0089D6?style=flat-square&logo=MicrosoftAzure&logoColor=white) ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=Git&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white)
 
-- **Others**: ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white) ![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css3&logoColor=white) ![WebSocket](https://img.shields.io/badge/WebSocket-000000?style=flat-square&logo=WebSocket&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=Linux&logoColor=black)
+- **Others**: ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white) ![HTML](https://img.shields.io/badge/HTML-E34F26?style=flat-square&logo=html5&logoColor=white) ![WebSocket](https://img.shields.io/badge/WebSocket-000000?style=flat-square&logo=WebSocket&logoColor=white) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=Linux&logoColor=black)
 
 ## 주요 프로젝트
 ### 1.[TSPOON]
 > 이 프로젝트는 회원가입, 로그인, 게시판 CRUD, 쪽지 기능 등을 포함하고 있습니다.
 
 **역할**: 백엔드 개발
+
 **기술 스택**: Java, Servlet, JSP, MySQL, Tomcat
+
 **주요 기능**:
 - 회원가입, 로그인, 로그아웃, 자동 로그인
   - Ajax 통신을 통해 아이디 중복체크 비동기 처리
@@ -49,7 +51,9 @@
 > 이 프로젝트는 온라인 강의 플랫폼으로, 강의 관리, 사용자 인증 등의 기능을 포함하고 있습니다.
 
 **역할**: 백엔드개발 및 공통 모듈 설계 및 DB설계 및 DDL관리, 홈서버 구축 및 배포
+
 **기술 스택**: Java, Servlet, JSP, MySQL, Tomcat, SSL 배포
+
 **주요 기능**:
 - 회원가입, 로그인, 강의 구매, 결제, 관리자 페이지등 다양한 기능 구현
 - 관리자 페이지에서 강의 관리, 회원 관리등 기능구현
@@ -77,7 +81,9 @@
 >이 프로젝트는 중고 거래 플랫폼으로, 중고 물품 거래 및 채팅 기능을 포함하고 있습니다.
 
 **역할**: 백엔드 개발
+
 **기술 스택**: Java, Servlet, JSP, MySQL, Tomcat, Spring, WebSocket
+
 **주요 기능**:
 - 회원가입, 로그인, 중고 물품 등록,수정,삭제 기능 구현
 - 중고물품 거래 프로세스 구현
@@ -110,7 +116,9 @@
 - K-MOOC 사이트를 참고하여 만든 프로젝트
 
 **역할**: 백엔드 개발
+
 **기술 스택**: Java, javascript, JPA, SpringBoot, MySQL
+
 **주요 기능**:
 - 회원 관리 기능
 - 강좌 관리 기능
@@ -144,7 +152,9 @@
 - 오늘의 학습은 학생들이 배운 내용을 쉽게 정리하고 공유할 수 있도록 도와주는 사이트입니다.
 
 **역할**: 백엔드 개발
+
 **기술 스택**: Java, SpringBoot, Node.js, MySQL, Nginx
+
 **주요 기능**:
 - MSA 기반 회원 관리 시스템
   - JWT 토큰 기반 인증
