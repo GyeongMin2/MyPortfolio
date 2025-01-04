@@ -1,17 +1,17 @@
 # 백엔드 개발자 포트폴리오
 
-> **최종 업데이트**: 2024년 12월 21일
+> **최종 업데이트**: 2025년 1월 4일
 
-## 소개
+## About Me
 안녕하세요! 백엔드 개발자를 목표로 하는 강경민 입니다.
 - 서버 개발과 시스템 아키텍처에 관심이 많습니다
 - 클린 코드와 테스트 작성을 중요하게 생각합니다
 - 코드 리뷰를 통해 성장하는 것을 중요하게 생각합니다
 - 새로운 기술 학습에 대한 열정이 있습니다.
 
-## 기술 스택
+## Skill
 
-### 주요 기술
+### Strong
 >실제 프로젝트에서 주도적으로 사용한 기술들입니다.
 - **Backend**: ![Java](https://img.shields.io/badge/Java-007396?style=flat-square&logo=Java&logoColor=white) ![Spring](https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=Spring&logoColor=white) ![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33D?style=flat-square&logo=Spring_Boot&logoColor=white)
 
@@ -21,9 +21,7 @@
 
 - **Frontend**: ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=JavaScript&logoColor=white)
 
-- **OS & Tools**: ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=Linux&logoColor=black) ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=Git&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white) ![WebSocket](https://img.shields.io/badge/WebSocket-000000?style=flat-square&logo=WebSocket&logoColor=white)
-
-### 활용 가능
+### Knowledge
 > 프로젝트에서 사용해본 경험이 있는 기술들입니다.
 - **Backend**: ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white)
 
@@ -31,7 +29,10 @@
 
 - **Cloud**: ![AWS_RDS](https://img.shields.io/badge/Amazon_RDS-232F3E?style=flat-square&logo=amazonrds&logoColor=white) ![Azure](https://img.shields.io/badge/Azure-0089D6?style=flat-square&logo=MicrosoftAzure&logoColor=white)
 
-## 주요 프로젝트
+### ETC
+- **OS & Tools**: ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=Linux&logoColor=black) ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=Git&logoColor=white) ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white) ![WebSocket](https://img.shields.io/badge/WebSocket-000000?style=flat-square&logo=WebSocket&logoColor=white)
+
+## Project
 ### 1.[TSPOON]
 > 이 프로젝트는 회원가입, 로그인, 게시판 CRUD, 쪽지 기능 등을 포함하고 있습니다.
 
@@ -206,7 +207,7 @@
 
 ***
 
-## 기술적 성과
+## Technical Achievements
 - **홈서버 구축 및 배포**
   - SSL 인증서를 Let's Encrypt를 통해 설정하여 웹 애플리케이션의 보안을 강화
   - 포트포워딩 설정을 통해 웹 애플리케이션 배포
@@ -217,29 +218,27 @@
 - **크론탭과 스케쥴러를 통한 리소스 모니터링**
   - java와 크론탭을 통해 리소스 모니터링 및 로그 저장
 - **MSA 기반 회원 관리 시스템 구현**
-  - Node.js 서버 (api.gyeongminiya.asia:3443)
-    - 회원 인증/인가 전용 API 서버
-    - JWT 토큰기반 인증시스템
-    - 이메일 인증 서비스
-  - Spring Boot 서버 (www.gyeongminiya.asia:8080)
-    - 프론트엔드 렌더링
-    - 게시물,채팅 등 주요 비즈니스 로직 처리
+  - Node.js 서버
+    - 회원관련 로직 처리 전용 API 서버
+  - Spring Boot 서버
+    - 프론트엔드 렌더링, 게시물,채팅 등 주요 비즈니스 로직 처리
+    - JWT 토큰 기반 인증
   - 서비스 연동
     - Nginx 리버스 프록시를 통한 라우팅
     - HTTP/3 프로토콜 지원으로 성능 최적화
     - JWT 토큰 기반 서비스간 인증
 - **메일 서버 구축**
-  - Postfix와 Dovecot을 활용한 자체 메일 서버 구축으로 비용 절감 및 완전한 제어 가능
+  - Postfix와 Dovecot을 활용한 자체 메일 서버 구축경험
 
-## 교육
+## Education
 - 명지전문대학 | 소프트웨어 콘텐츠학과 (2024년 8월)
 - 천재교육 | java fullstack 개발자 과정 (2024년 7월 ~ 2025년 1월)
 
-## 연락처
+## Contact
 - 이메일: kgmmsw101@gmail.com, info@gyeongminiya.asia
 - GitHub: [GyeongMin2](https://github.com/GyeongMin2)
 
-## 토이 프로젝트
+## Toy Project
 
 ### 1.[javaSimpleBoard](https://github.com/GyeongMin2/javaSimpleBoard)
 > java, jdbc,mysql을 이용한 cli기반 게시판
